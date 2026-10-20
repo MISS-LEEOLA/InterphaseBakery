@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lindiwe's Bakery - Freshly Baked, Smartly Managed</title>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Link to External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#" class="nav-brand">Lindiwe's <span>Bakery</span></a>
+    <div class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#features">Features</a>
+      <a href="#customers">Customers</a>
+      <a href="#stock">Stock</a>
+      <a href="#sales">Sales</a>
+      <a href="#banking">Banking</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="hero-content">
+      <span class="hero-badge"><i class="fa-solid fa-wheat-awn"></i> ALL-IN-ONE BAKERY MANAGEMENT</span>
+      <h1 class="hero-title">Freshly Baked, Smartly Managed.</h1>
+      <p class="hero-subtitle">Effortlessly manage stock, sales, customers, receipts, and banking records all in one place—so you can focus on baking happiness every single day.</p>
+      <div class="hero-buttons">
+        <a href="#dashboard" class="btn btn-primary"><i class="fa-solid fa-chart-line"></i> View Dashboard</a>
+        <a href="#sales" class="btn btn-secondary"><i class="fa-solid fa-basket-shopping"></i> Record a Sale</a>
+      </div>
+    </div>
+    
+    <!-- Hero Image Gallery -->
+    <div class="hero-image-wrapper">
+      <div class="hero-gallery">
+        <div class="gallery-card card-1">
+          <img src="coissant.jpg" alt="Chocolate Drizzled Croissant" />
+          <div class="card-caption">
+            <strong>Chocolate Croissants</strong>
+            <span>Freshly baked flaky pastry</span>
+          </div>
+        </div>
+        <div class="gallery-card card-2">
+          <img src="tart.webp" alt="Fresh Strawberry Custard Tart" />
+          <div class="card-caption">
+            <strong>Strawberry Tart</strong>
+            <span>Fresh fruit & vanilla cream</span>
+          </div>
+        </div>
+        <div class="gallery-card card-3">
+          <img src="baked.webp" alt="Freshly Baked Cookies" />
+          <div class="card-caption">
+            <strong>Oven Fresh Cookies</strong>
+            <span>Warm chocolate chip batches</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dashboard Section -->
+  <section class="section dashboard-section" id="dashboard">
+    <div class="section-header">
+      <span class="section-badge">ANALYTICS OVERVIEW</span>
+      <h2>Bakery Dashboard</h2>
+      <p class="section-sub">Real-time metrics tracking your bakery's performance today</p>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-title">Total Sales</span>
+          <div class="kpi-icon"><i class="fa-solid fa-sack-dollar"></i></div>
+        </div>
+        <div class="kpi-value" id="kpi-sales">R 0.00</div>
+        <span class="kpi-sub positive"><i class="fa-solid fa-arrow-up"></i> Updated real-time</span>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-title">Stock Count</span>
+          <div class="kpi-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+        </div>
+        <div class="kpi-value" id="kpi-stock">0 items</div>
+        <span class="kpi-sub"><i class="fa-solid fa-warehouse"></i> Total units in pantry</span>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-title">Active Customers</span>
+          <div class="kpi-icon"><i class="fa-solid fa-users"></i></div>
+        </div>
+        <div class="kpi-value" id="kpi-customers">0</div>
+        <span class="kpi-sub positive"><i class="fa-solid fa-user-plus"></i> Registered accounts</span>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-title">Low Stock Alert</span>
+          <div class="kpi-icon warning"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        </div>
+        <div class="kpi-value" id="kpi-low-stock">0 items</div>
+        <span class="kpi-sub warning" id="kpi-low-sub"><i class="fa-solid fa-circle-check"></i> Stock levels healthy</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bakery Banner Showcase -->
+  <div class="container margin-bottom">
+    <div class="bakery-banner">
+      <div class="banner-img">
+        <img src="download.webp" alt="Bakery Ingredients" />
+      </div>
+      <div class="banner-img">
+        <img src="OIP.webp" alt="Muffin Preparation" />
+      </div>
+      <div class="banner-text">
+        <h3>Mastering the Craft of Baking & Management</h3>
+        <p>From quality ingredients to automated sales logs, keep your bakery operations smooth and delicious.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Grid -->
+  <section class="section" id="features">
+    <div class="section-header">
+      <span class="section-badge">POWERFUL TOOLS</span>
+      <h2>Everything Your Bakery Needs</h2>
+      <p class="section-sub">Tailored tools designed specifically for artisanal bakeries and pastry shops</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-bread-slice"></i></div>
+        <h3>Flour-Shining Precision</h3>
+        <p>Track raw ingredient levels down to the gram so you never run out during morning prep.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+        <h3>Oven-Fresh Timing</h3>
+        <p>Log baking batches, track shelf life, and ensure customers always get peak freshness.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-chart-pie"></i></div>
+        <h3>Financial Cleanliness</h3>
+        <p>Automated balance reconciliation that matches cash register sales with bank deposits.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-receipt"></i></div>
+        <h3>Receipts & Sales Logs</h3>
+        <p>Instant digital receipts sent via email or printable directly at point of purchase.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-cash-register"></i></div>
+        <h3>Lightning Point of Sale</h3>
+        <p>Quick register checkout interface built for fast morning rush-hour transaction workflows.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-building-columns"></i></div>
+        <h3>Live Banking Linkage</h3>
+        <p>Synchronize incoming payments, card transactions, and cash deposits seamlessly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Capture Form & Table -->
+  <section class="section" id="customers">
+    <div class="section-header">
+      <span class="section-badge">CUSTOMER MANAGEMENT</span>
+      <h2>Capture Customer Information</h2>
+      <p class="section-sub">Build your loyal bakery customer directory to manage rewards and contact details</p>
+    </div>
+
+    <div class="card form-container">
+      <form id="customerForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="custName">Full Name</label>
+            <input type="text" id="custName" placeholder="e.g. Thabo Molefe" required />
+          </div>
+          <div class="form-group">
+            <label for="custPhone">Phone Number</label>
+            <input type="tel" id="custPhone" placeholder="e.g. +27 82 123 4567" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="custEmail">Email Address</label>
+            <input type="email" id="custEmail" placeholder="e.g. thabo@example.com" required />
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-purple"><i class="fa-solid fa-user-plus"></i> Save Customer</button>
+      </form>
+    </div>
+
+    <div class="card table-card">
+      <h3>Registered Customer Directory</h3>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Customer Name</th>
+              <th>Phone Number</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody id="customerTableBody">
+            <!-- Rows injected by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stock Management Section -->
+  <section class="section" id="stock">
+    <div class="section-header">
+      <span class="section-badge">INVENTORY CONTROL</span>
+      <h2>Add and Manage Stock</h2>
+      <p class="section-sub">Keep tight control over ingredients, baked goods, and pantry packaging supplies</p>
+    </div>
+
+    <div class="card form-container">
+      <form id="stockForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="productName">Product Name</label>
+            <input type="text" id="productName" placeholder="e.g. Artisanal Sourdough Bread" required />
+          </div>
+          <div class="form-group">
+            <label for="stockQty">Quantity</label>
+            <input type="number" id="stockQty" placeholder="e.g. 50" min="1" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="unitPrice">Price Per Unit (R)</label>
+            <input type="number" id="unitPrice" placeholder="e.g. 45.00" step="0.01" min="0" required />
+          </div>
+          <div class="form-group">
+            <label for="minStock">Minimum Threshold</label>
+            <input type="number" id="minStock" placeholder="e.g. 10" min="1" required />
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-purple"><i class="fa-solid fa-box-archive"></i> Save Stock Item</button>
+      </form>
+    </div>
+
+    <div class="card table-card">
+      <h3>Pantry & Bakery Stock Records</h3>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Product Name</th>
+              <th>Quantity</th>
+              <th>Unit Price</th>
+              <th>Stock Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="stockTableBody">
+            <!-- Rows injected by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sales Management Section -->
+  <section class="section" id="sales">
+    <div class="section-header">
+      <span class="section-badge">POINT OF SALE</span>
+      <h2>Record a Sale</h2>
+      <p class="section-sub">Log real-time sales transactions, reduce stock automatically, and generate receipts</p>
+    </div>
+
+    <div class="card form-container">
+      <form id="salesForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="saleCustomer">Select Customer</label>
+            <select id="saleCustomer" required>
+              <option value="">-- Choose Customer --</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="saleProduct">Select Product</label>
+            <select id="saleProduct" required>
+              <option value="">-- Choose Product --</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="saleQty">Quantity Sold</label>
+            <input type="number" id="saleQty" placeholder="e.g. 2" min="1" value="1" required />
+          </div>
+          <div class="form-group">
+            <label for="paymentMethod">Payment Method</label>
+            <select id="paymentMethod" required>
+              <option value="Card">Card Payment</option>
+              <option value="Cash">Cash</option>
+              <option value="EFT">Direct EFT / Online Transfer</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-purple"><i class="fa-solid fa-receipt"></i> Process Sale</button>
+      </form>
+    </div>
+
+    <div class="card table-card">
+      <h3>Sales History Log</h3>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Receipt ID</th>
+              <th>Date</th>
+              <th>Customer</th>
+              <th>Product</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="salesTableBody">
+            <!-- Rows injected by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Receipts Section -->
+  <section class="section" id="receipts">
+    <div class="section-header">
+      <span class="section-badge">DIGITAL DOCUMENTS</span>
+      <h2>Receipts and Sales Records</h2>
+      <p class="section-sub">Search, print, or view detailed proof of purchase receipts</p>
+    </div>
+
+    <div class="card form-container margin-bottom">
+      <div class="form-group" style="margin-bottom:0;">
+        <label for="searchReceipt">Search Receipts by ID, Customer Name or Product</label>
+        <input type="text" id="searchReceipt" placeholder="Type receipt code or name to filter..." />
+      </div>
+    </div>
+
+    <div class="card" id="receiptPreviewBox">
+      <div id="receiptContent">
+        <p style="text-align: center; color: var(--text-light); font-style: italic;">
+          Select "View Receipt" from the Sales History table above to load transaction details here.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banking and Payment Records Section -->
+  <section class="section" id="banking">
+    <div class="section-header">
+      <span class="section-badge">FINANCIAL RECORDS</span>
+      <h2>Banking and Payment Records</h2>
+      <p class="section-sub">Reconcile payments, manage deposits, and maintain clean auditing trails</p>
+    </div>
+
+    <div class="card form-container">
+      <form id="bankingForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bankAccount">Bank / Account Name</label>
+            <select id="bankAccount" required>
+              <option value="First National Bank (FNB)">First National Bank (FNB)</option>
+              <option value="Standard Bank">Standard Bank</option>
+              <option value="Capitec Bank">Capitec Bank</option>
+              <option value="Absa Bank">Absa Bank</option>
+              <option value="Nedbank">Nedbank</option>
+              <option value="Bakery Cash Drawer">Bakery Petty Cash Drawer</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="transactionType">Transaction Type</label>
+            <select id="transactionType" required>
+              <option value="Deposit">Deposit / Sales Revenue</option>
+              <option value="Withdrawal">Withdrawal / Supplier Expense</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bankAmount">Amount (R)</label>
+            <input type="number" id="bankAmount" placeholder="e.g. 1500.00" step="0.01" min="0.01" required />
+          </div>
+          <div class="form-group">
+            <label for="bankRef">Reference Note</label>
+            <input type="text" id="bankRef" placeholder="e.g. Flour Supplier Invoice #1024" required />
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-purple"><i class="fa-solid fa-building-columns"></i> Post Bank Entry</button>
+      </form>
+    </div>
+
+    <div class="card table-card">
+      <h3>Banking Ledger Records</h3>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Reference</th>
+              <th>Type and Method</th>
+              <th>Status</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody id="bankingTableBody">
+            <!-- Rows injected by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Lindiwe's Bakery</h3>
+        <p>Crafting delicious memories and empowering bakery businesses with modern inventory, sales, and financial management tools.</p>
+        
+        <!-- Social Media Icons Section -->
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://whatsapp" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#customers">Customer Directory</a></li>
+          <li><a href="#stock">Stock Control</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#sales">Record Sale</a></li>
+          <li><a href="#receipts">Search Receipts</a></li>
+          <li><a href="#banking">Banking Ledger</a></li>
+          <li><a href="#">Support & Help</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Lindiwe's Bakery Management System. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Receipt Modal -->
+  <div class="modal-backdrop" id="receiptModal">
+    <div class="modal-box">
+      <div id="modalReceiptContent"></div>
+      <div class="modal-actions">
+        <button class="btn btn-purple" onclick="window.print()"><i class="fa-solid fa-print"></i> Print Receipt</button>
+        <button class="btn btn-secondary" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Link to External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
